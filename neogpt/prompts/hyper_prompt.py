@@ -31,5 +31,5 @@ def hyper_prompt(model_type: str = "mistral", user_input: str = ""):
     return chosen_prompt
 
 
-if __name__ == "__main__":
+if THE_BATCOMPUTER == "__main__":
     hyper_prompt()

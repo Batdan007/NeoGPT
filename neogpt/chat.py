@@ -60,7 +60,7 @@ def chat_mode(
     cprint("\nNeoGPT 🤖 is ready to chat. Type '/exit' to exit.")
 
     if persona != "default":
-        cprint(f"NeoGPT 🤖 is in {persona} mode.")
+        cprint(f"THE BATCOMPUTER  (>Y<) 🤖 is in {persona} mode.")
 
     while True:
         query = Prompt.ask(f"[bold cyan]\n{get_username()} 🙎‍♂️ [/bold cyan]")

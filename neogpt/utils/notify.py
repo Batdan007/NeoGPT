@@ -8,8 +8,8 @@ def notify(
     title,
     message,
     timeout=10,
-    ticker="NeoGPT says Hi!",
-    app_name="NeoGPT",
+    ticker="THE BATCOMPUTER (>Y<) says Hi!",
+    app_name="THE BATCOMPUTER (>Y<)",
     app_icon="path/to/icon.icns",
     toast=False,
 ):
@@ -45,4 +45,4 @@ def notify(
 
 
 # Test the notify function
-# notify("NeoGPT", "Copied to clipboard!")
+# notify("THE BATCOMPUTER (>Y<)", "Copied to clipboard!")

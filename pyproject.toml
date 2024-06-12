@@ -1,7 +1,7 @@
 [tool.poetry]
 name = "neogpt"
 version = "0.1.0"
-description = "NeoGPT: Chat effortlessly with Documents, YouTube Videos,Code, and Social Media Chats. Your go-to for quick and smart interactions! 🤖💬"
+description = "THE BATCOMPUTER: Ask BATDAN'S greatest tech ally anything! 🤖💬"
 authors = ["Neokd"]
 license = "MIT"
 readme = "README.md"

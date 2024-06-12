@@ -49,7 +49,7 @@ def conversation_navigator(chain):
     files = os.listdir(CONVERSTAION_MEMORY_DIRECTORY)
     if len(files) == 0:
         cprint(
-            "\nNo chat history available. Save the chat history using [bold cyan]/save[/bold cyan] command. Start chatting with NeoGPT to see the history."
+            "\nNo chat history available. Save the chat history using [bold cyan]/save[/bold cyan] command. Start chatting with THE BATCOMPUTER (>Y<) to see the history."
         )
         return
     for i, file in enumerate(files, start=1):
@@ -82,9 +82,9 @@ def conversation_navigator(chain):
             if isinstance(content, str):
                 content = content.split("\n")
                 for line in content:
-                    if line.startswith("NeoGPT: "):
+                    if line.startswith("THE BATCOMPUTER (>Y<): "):
                         chain.combine_documents_chain.memory.chat_memory.messages.append(
-                            AIMessage(content=line.replace("NeoGPT: ", "").strip())
+                            AIMessage(content=line.replace("THE BATCOMPUTER (>Y<): ", "").strip())
                         )
                     else:
                         chain.combine_documents_chain.memory.chat_memory.messages.append(

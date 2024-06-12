@@ -171,7 +171,7 @@ def builder(
 
 
 if __name__ == "__main__":
-    parser = argparse.ArgumentParser(description="NeoGPT CLI Interface")
+    parser = argparse.ArgumentParser(description="THE BATCOMPUTER CLI Interface")
     parser.add_argument(
         "--db",
         choices=["Chroma", "FAISS"],

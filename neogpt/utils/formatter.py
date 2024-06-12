@@ -83,7 +83,7 @@ class MessageFormatter(Formatter):
         Initializes the MessageFormatter with a Live instance and default message.
         """
         super().__init__()
-        ai_message = Style(bold=True, color="bright_yellow").render("NeoGPT 🤖:")
+        ai_message = Style(bold=True, color="bright_yellow").render("THE BATCOMPUTER (>Y<) 🤖:")
         self.type = "message"
         self.message = ai_message + " "
 

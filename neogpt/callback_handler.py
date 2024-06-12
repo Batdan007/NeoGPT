@@ -212,7 +212,7 @@ class StreamingStdOutCallbackHandler(BaseCallbackHandler):
     ) -> None:
         # Start a new line for a clean display
         self.message_block_instance = MessageFormatter()
-        # Start a thread for the "NeoGPT 🤖 is thinking..." message
+        # Start a thread for the "THE BATCOMPUTER 🤖 is thinking..." message
         self.thinking_animation_thread = threading.Thread(
             target=self.thinking_animation
         )
@@ -228,7 +228,7 @@ class StreamingStdOutCallbackHandler(BaseCallbackHandler):
         # Loading animation when question is asked
         sys.stdout.write("\n")
         with self.console.status(
-            "NeoGPT 🤖 is thinking...",
+            "THE BATCOMPUTER (>Y<)🤖 is thinking...",
             spinner="bouncingBar",
             spinner_style="bold cyan",
             speed=0.5,
@@ -285,7 +285,7 @@ class AgentCallbackHandler(BaseCallbackHandler):
     ) -> None:
         # Start a new line for a clean display
         self.message_block_instance = MessageFormatter()
-        # Start a thread for the "NeoGPT 🤖 is thinking..." message
+        # Start a thread for the "THE BATCOMPUTER (>Y<) 🤖 is thinking..." message
         self.thinking_animation_thread = threading.Thread(
             target=self.thinking_animation
         )

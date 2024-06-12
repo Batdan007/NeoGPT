@@ -67,7 +67,7 @@ def magic_commands(user_input, chain):
         cprint("\n[bold magenta]Chat history: 📖[/bold magenta]")
         if len(chain.combine_documents_chain.memory.chat_memory.messages) == 0:
             cprint(
-                "No chat history available. Start chatting with NeoGPT to see the history."
+                "No chat history available. Start chatting with THE BATCOMPUTER (>Y<) to see the history."
             )
             return True
         # print(chain.combine_documents_chain.memory.chat_memory.messages)
@@ -77,7 +77,7 @@ def magic_commands(user_input, chain):
                     f"[bright_yellow]{get_username()} [/bright_yellow]{message.content}"
                 )
             else:
-                cprint(f"[bright_blue]NeoGPT: [/bright_blue]{message.content}")
+                cprint(f"[bright_blue]THE BATCOMPUTER (>Y<): [/bright_blue]{message.content}")
 
         return True
 
@@ -95,26 +95,26 @@ def magic_commands(user_input, chain):
                 if isinstance(message, HumanMessage):
                     f.write(f"{get_username()} {message.content}\n")
                 else:
-                    f.write(f"NeoGPT: {message.content}\n")
+                    f.write(f"THE BATCOMPUTER (>Y<): {message.content}\n")
         cprint(f"Chat history saved as {filename}")
         return True
 
-    # If the user inputs '/copy', copy the last response from NeoGPT to the clipboard
+    # If the user inputs '/copy', copy the last response from THE BATCOMPUTER (>Y<) to the clipboard
     elif user_input == "/copy":
         if len(chain.combine_documents_chain.memory.chat_memory.messages) > 0:
             last_message = chain.combine_documents_chain.memory.chat_memory.messages[-1]
             if not isinstance(last_message, HumanMessage):
                 pyperclip.copy(last_message.content)
-                notify("NeoGPT", "Copied to clipboard!")
+                notify("THE BATCOMPUTER (>Y<)", "Copied to clipboard!")
                 return True
             else:
                 cprint(
-                    "🚫 Oops! The last message is from the user, not  Try again after NeoGPT's response. 😅"
+                    "🚫 Oops! The last message is from the user, not  Try again after THE BATCOMPUTER (>Y<)'s response. 😅"
                 )
                 return
         else:
             cprint(
-                "🚫 No chat history available. Start a conversation with NeoGPT first. 😊"
+                "🚫 No chat history available. Start a conversation with THE BATCOMPUTER (>Y<) first. 😊"
             )
             return
 
@@ -139,7 +139,7 @@ def magic_commands(user_input, chain):
                 return last_message.content
             else:
                 cprint(
-                    "🚫 Oops! The last message is from NeoGPT, not the user. Try again after the user's response. 😅"
+                    "🚫 Oops! The last message is from THE BATCOMPUTER (>Y<), not the user. Try again after the user's response. 😅"
                 )
                 return
         else:
@@ -163,9 +163,9 @@ def magic_commands(user_input, chain):
                 loaded_chat_history = []
                 for line in contents:
                     # Split the line into username and message content
-                    if line.startswith("NeoGPT:"):
+                    if line.startswith("THE BATCOMPUTER (>Y<):"):
                         loaded_chat_history.append(
-                            AIMessage(content=line.replace("NeoGPT:", "").strip())
+                            AIMessage(content=line.replace("THE BATCOMPUTER (>Y<):", "").strip())
                         )
                     else:
                         loaded_chat_history.append(
@@ -226,7 +226,7 @@ def magic_commands(user_input, chain):
                         f"   [bright_yellow]{get_username()} [/bright_yellow]{message.content}"
                     )
                 else:
-                    cprint(f"   [bright_blue]NeoGPT: [/bright_blue]{message.content}")
+                    cprint(f"   [bright_blue]THE BATCOMPUTER (>Y<): [/bright_blue]{message.content}")
                 found = True
         if not found:
             cprint(f"No messages found with the keyword '{keyword}'.")
@@ -250,7 +250,7 @@ def magic_commands(user_input, chain):
         if code_block:
             pyperclip.copy(code_block)
             cprint("\n[bold green]📋 Code block copied to clipboard![/bold green]")
-            notify("NeoGPT", "Code block copied to clipboard!")
+            notify("THE BATCOMPUTER (>Y<)", "Code block copied to clipboard!")
             return True
         else:
             cprint("🚫 No code block found in the chat history. Please try again.")
@@ -263,7 +263,7 @@ def magic_commands(user_input, chain):
         cprint("🚪 /exit - Exit the chat session")
         cprint("📜 /history - Print the chat history")
         cprint("💾 /save - Save the chat history to a `neogpt/conversations`")
-        cprint("📋 /copy - Copy the last response from NeoGPT to the clipboard")
+        cprint("📋 /copy - Copy the last response from THE BATCOMPUTER (>Y<) to the clipboard")
         cprint("⏪ /undo - Remove the last response from the chat history")
         cprint("🔁 /redo - Resend the last human input to the model")
         cprint("📂 /load [path] - Load the saved chat history from the specified file")

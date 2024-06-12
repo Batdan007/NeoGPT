@@ -190,7 +190,7 @@ NEOGPT_LOG_FILE = os.path.join(LOG_FOLDER, "neogpt.log")
 PROJECT_COST = 0
 AGENT_THOUGHTS = []
 QA_ENGINEER_FEEDBACK = ""
-CURRENT_WORKING_AGENT = ["NeoGPT"]
+CURRENT_WORKING_AGENT = ["THE BATCOMPUTER (>Y<)"]
 
 
 def import_config(config_filename):

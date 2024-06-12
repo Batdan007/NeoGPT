@@ -18,7 +18,7 @@ from neogpt.utils import notify
 
 
 def main():
-    parser = argparse.ArgumentParser(description="NeoGPT CLI Interface")
+    parser = argparse.ArgumentParser(description="THE BATCOMPUTER  (>Y<) CLI Interface")
     parser.add_argument(
         "--device-type",
         choices=["cpu", "mps", "cuda"],
@@ -69,7 +69,7 @@ def main():
         help="The source documents are displayed if the show_sources flag is set to True.",
     )
     parser.add_argument(
-        "--ui", default=False, action="store_true", help="Start a UI server for NeoGPT"
+        "--ui", default=False, action="store_true", help="Start a UI server for THE BATCOMPUTER  (>Y<)"
     )
     parser.add_argument(
         "--debug", default=False, action="store_true", help="Enable debugging"
@@ -172,7 +172,7 @@ def main():
         "--max-budget",
         default=None,
         type=float,
-        help="Specify the maximum budget for NeoGPT to spend. Useful when running an API",
+        help="Specify the maximum budget for THE BATCOMPUTER  (>Y<) to spend. Useful when running an API",
     )
     parser.add_argument(
         "-y",
@@ -190,7 +190,7 @@ def main():
         "--interpreter",
         default=False,
         action="store_true",
-        help="Enable interpreter mode for NeoGPT 🤖 and run code.",
+        help="Enable interpreter mode for THE BATCOMPUTER  (>Y<) 🤖 and run code.",
     )
 
     parser.add_argument(
@@ -274,7 +274,7 @@ def main():
 
     if args.interpreter:
         notify(
-            title="NeoGPT: Interpreter Warning",
+            title="THE BATCOMPUTER  (>Y<): Interpreter Warning",
             message="🚧 Caution: You are using the experimental interpreter feature. Use it with Care. 🚧",
         )
 
@@ -297,7 +297,7 @@ def main():
     if args.ui or (overwrite and overwrite["UI"]):
         from streamlit.web import cli as stcli
 
-        logging.info("Starting the UI server for NeoGPT 🤖")
+        logging.info("Starting the UI server for THE BATCOMPUTER  (>Y<) 🤖")
         logging.info("Note: The UI server only supports local retriever and Chroma DB")
         try:
             sys.argv = ["streamlit", "run", "neogpt/ui.py"]

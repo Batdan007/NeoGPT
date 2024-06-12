@@ -86,15 +86,15 @@ def get_cpu_info() -> str:
 
 def get_neogpt_version() -> str:
     """
-    Retrieves the NeoGPT library version installed in the environment.
+    Retrieves the THE BATCOMPUTER (>Y<) library version installed in the environment.
 
     Returns:
-        str: The NeoGPT library version, e.g., '1.0.3'. Raises a RuntimeError if the package is not found.
+        str: The THE BATCOMPUTER (>Y<) library version, e.g., '1.0.3'. Raises a RuntimeError if the package is not found.
     """
     try:
         return importlib.metadata.version("neogpt")
     except importlib.metadata.PackageNotFoundError:
-        raise RuntimeError("NeoGPT package is not installed.")
+        raise RuntimeError("THE BATCOMPUTER (>Y<) package is not installed.")
 
 
 # def neogpt_info() to display current version of neogpt, model used, max_tokens,

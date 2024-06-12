@@ -292,7 +292,7 @@ def interpreter(message, chain, force_run):
         else:
             cprint(
                 Rule(
-                    f"\n[bold]NeoGPT EXECUTED {language.upper()} CODE[/bold]",
+                    f"\n[bold]THE BATCOMPUTER  (>Y<) EXECUTED {language.upper()} CODE[/bold]",
                     style="green",
                 )
             )
