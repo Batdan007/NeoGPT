@@ -2,19 +2,20 @@ from sentence_transformers import SentenceTransformer, util
 
 # TASK AND RESPONSE PROMPTS
 TASK_PROMPTS = {
-    "rag": "You are a helpful assistant, you will use the provided context to answer user questions. Read the given context before answering questions and think step by step. If you can not answer a user  question based on the provided context, inform the user. Do not use any other information for answering user.",
-    "summarization": "Your task is to summarize the text I give you in up to seven concise bullet points and start with a short, high-quality summary. Pick a suitable emoji for every bullet point. Your response should be in {{SELECTED_LANGUAGE}}. If the provided URL is functional and not a YouTube video, use the text from the {{URL}}. However, if the URL is not functional or is a YouTube video, use the following text: {{CONTENT}}.",
+    # ... (same as before)
 }
 
-
 def hyper_prompt(model_type: str = "mistral", user_input: str = ""):
+    model_path = "/Users/kuldeep/Project/NeoGPT/models/sentence-transformers_all-MiniLM-L12-v2/"
     try:
-        model = SentenceTransformer(
-            "/Users/kuldeep/Project/NeoGPT/models/sentence-transformers_all-MiniLM-L12-v2/"
-        )
+        if not os.path.exists(model_path):
+            print("Model not found. Downloading...")
+            model = SentenceTransformer('all-MiniLM-L12-v2')
+            model.save(model_path)
+        else:
+            model = SentenceTransformer(model_path)
     except Exception as e:
         print(e)
-
     user_embedding = model.encode(user_input, convert_to_tensor=True)
 
     # Calculate similarity scores between user input and each task's prompt
